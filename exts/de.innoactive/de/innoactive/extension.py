@@ -139,7 +139,6 @@ class DeInnoactiveExtension(omni.ext.IExt):
 
     def on_startup(self, ext_id):
         print("Innoactive startup")
-
         
         self._base_url = "https://portal.innoactive.io"
         self._app_id = 3757  # Default app ID, to be provided
@@ -154,8 +153,8 @@ class DeInnoactiveExtension(omni.ext.IExt):
                 with ui.HStack(spacing=5):
                     manager = omni.kit.app.get_app().get_extension_manager()
                     ext_path = manager.get_extension_path_by_module("de.innoactive")
-                    img = ui.Image(height=40, alignment=ui.Alignment.RIGHT, pixel_aligned=True)
-                    img.source_url = ext_path + "/data/innoactive_logo.png" 
+                    img = ui.Image(height=40, alignment=ui.Alignment.RIGHT)
+                    img.source_url = ext_path + "/data/innoactive_logo2.png" 
                     
                 with ui.HStack(spacing=5):
                     ui.Label("Base Url", name="base_url", width=LABEL_WIDTH, height=HEIGHT)
@@ -184,9 +183,10 @@ class DeInnoactiveExtension(omni.ext.IExt):
                     self._usd_url_model.as_string = self._usd_file
                     ui.StringField(model=self._usd_url_model, height=HEIGHT, word_wrap=True)
                     self._usd_url_model_changed = self._usd_url_model.subscribe_value_changed_fn(self.on_usd_value_changed)
-                    ui.Button("Clear", clicked_fn=self.clear_usd, width=60, height=HEIGHT)
                     ui.Button("From Stage", clicked_fn=self.set_stage_usd, width=90, height=HEIGHT)
-                
+                with ui.HStack(spacing=5):
+                    ui.Spacer( width=LABEL_WIDTH)
+                 
                 with ui.HStack(spacing=5):
                     ui.Label("Sharing URL", name="sharing_url", width=LABEL_WIDTH, height=HEIGHT)
                     self._sharing_url_model = ui.SimpleStringModel()
