@@ -1,52 +1,29 @@
-# Extension Project Template
+# Innoactive Omniverse Extension
 
-This project was automatically generated.
+This extension for NVIDIA Omniverse allows you to create a sharing link to Innoactive Portal that will allow users to launch the USD file with Omniverse Enterprise in the cloud and stream it into their browser and/or Standalone VR headset.
 
-- `app` - It is a folder link to the location of your *Omniverse Kit* based app.
-- `exts` - It is a folder where you can add new extensions. It was automatically added to extension search path. (Extension Manager -> Gear Icon -> Extension Search Path).
+How it works:
+1. Install the extension
+2. Copy the sharing link and sent it to the user
+3. User clicks the sharing link and can use USD file with Omniverse Enterprise on Innoactive Portal cloud.
 
-Open this folder using Visual Studio Code. It will suggest you to install few extensions that will make python experience better.
+Benefits:
+- Users can contribute and review USD files without need for a own workstation
+- XR cloud streaming supported: stream not only to the browser but even to a Standalone VR headset
+- Compliant with your IT: Both SaaS and Self-hosted options available
 
-Look for "de.innoactive" extension in extension manager and enable it. Try applying changes to any python files, it will hot-reload and you can observe results immediately.
+Installation:
+1. Checkout this repository on your PC
+2. Go to "Window / Extensions / Options / Settings"
+3. Add the repository path to the Extension Search Paths (e.g. ../innoactive-omniverse-extension/exts)
+4. Search for "Innoactive" in "Third Party" and enable the Innoactive extension (de.innoactive)
 
-Alternatively, you can launch your app from console with this folder added to search path and your extension enabled, e.g.:
-
-```
-> app\omni.code.bat --ext-folder exts --enable company.hello.world
-```
-
-# App Link Setup
-
-If `app` folder link doesn't exist or broken it can be created again. For better developer experience it is recommended to create a folder link named `app` to the *Omniverse Kit* app installed from *Omniverse Launcher*. Convenience script to use is included.
-
-Run:
-
-```
-> link_app.bat
-```
-
-If successful you should see `app` folder link in the root of this repo.
-
-If multiple Omniverse apps is installed script will select recommended one. Or you can explicitly pass an app:
-
-```
-> link_app.bat --app create
-```
-
-You can also just pass a path to create link to:
-
-```
-> link_app.bat --path "C:/Users/bob/AppData/Local/ov/pkg/create-2021.3.4"
-```
-
-
-# Sharing Your Extensions
-
-This folder is ready to be pushed to any git repository. Once pushed direct link to a git repository can be added to *Omniverse Kit* extension search paths.
-
-Link might look like this: `git://github.com/[user]/[your_repo].git?branch=main&dir=exts`
-
-Notice `exts` is repo subfolder with extensions. More information can be found in "Git URL as Extension Search Paths" section of developers manual.
-
-To add a link to your *Omniverse Kit* based app go into: Extension Manager -> Gear Icon -> Extension Search Path
+Usage:
+1. Select USD file (will get auto-filled from current Stage)
+2. Select OV runtime
+3. Select streaming mode (browser, VR, local=no streaming)
+4. Base Url: configure this to match your base URL of Innoactive Portal cloud (login here https://portal.innoactive.io/ and copy paste the domain name incl. https:// but without trailing slash)
+5. Click "Test" to start a cloud streaming session yourself
+6. Click "Copy" to copy the sharing URL to the clipboard.
+7. Send the sharing link to the user you want to view the USD file via cloud streaming. Ensure the user has a Innoactive Portal account (Click "Invite user" button if needed)
 
