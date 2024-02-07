@@ -56,6 +56,11 @@ class DeInnoactiveExtension(omni.ext.IExt):
             return False
 
     def set_notification(self, value, label):
+        self._notification_label.text = ""
+        self._notification_label.visible = False
+        self._warning_label.text = ""
+        self._warning_label.visible = False
+        
         label.text = value
         label.visible = True
         def delete_notification():
@@ -149,9 +154,9 @@ class DeInnoactiveExtension(omni.ext.IExt):
                 with ui.HStack(spacing=5):
                     manager = omni.kit.app.get_app().get_extension_manager()
                     ext_path = manager.get_extension_path_by_module("de.innoactive")
-                    img = ui.Image(height=52,alignment=ui.Alignment.RIGHT)
-                    img.source_url = ext_path + "/data/innoactive_logo.png"
-                
+                    img = ui.Image(height=40, alignment=ui.Alignment.RIGHT, pixel_aligned=True)
+                    img.source_url = ext_path + "/data/innoactive_logo.png" 
+                    
                 with ui.HStack(spacing=5):
                     ui.Label("Base Url", name="base_url", width=LABEL_WIDTH, height=HEIGHT)
                     self._base_url_model = ui.SimpleStringModel()
@@ -193,13 +198,14 @@ class DeInnoactiveExtension(omni.ext.IExt):
                     self.button_test = ui.Button("Test", clicked_fn=self.open_url, width=60, height=HEIGHT)
                     self.button_invite = ui.Button("Invite user", clicked_fn=self.open_invite_url, width=90, height=HEIGHT)
                     
-                with ui.HStack(spacing=5, style={"Label": {"color": cl("#76b900")}}):
+                with ui.HStack(spacing=5, height=HEIGHT, style={"Notification": {"color": cl("#76b900")}, "Error": {"color": cl("#d48f09")}}):
                     ui.Spacer( width=LABEL_WIDTH)
-                    self._notification_label = ui.Label("", name="notification", height=HEIGHT, visible=False)
+                    with ui.VStack(spacing=8, height=0):
+                        self._notification_label = ui.Label("", word_wrap=True, name="notification", height=HEIGHT, visible=False, style_type_name_override="Notification")
+                        self._warning_label = ui.Label("", word_wrap=True, name="notification", height=HEIGHT, visible=False, style_type_name_override="Error")
                 
-                with ui.HStack(spacing=5, style={"Label": {"color": cl("#d48f09")}}):
-                    ui.Spacer( width=LABEL_WIDTH)
-                    self._warning_label = ui.Label("", name="notification", height=HEIGHT, visible=False)
-
+                
+                    
+            
         self.update_sharing_link()
         self.set_stage_usd()
