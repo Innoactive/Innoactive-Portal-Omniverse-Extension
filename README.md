@@ -12,7 +12,7 @@ Benefits:
 - XR cloud streaming supported: stream not only to the browser but even to a Standalone VR headset
 - Compliant with your IT: Both SaaS and Self-hosted options available
 
-![Innoactive Omniverse Extension]([http://url/to/img.png](https://github.com/Innoactive/innoactive-omniverse-extension/blob/master/exts/de.innoactive/data/preview_readme.png)))
+![Innoactive Omniverse Extension](http://url/to/img.png](https://github.com/Innoactive/innoactive-omniverse-extension/blob/master/exts/de.innoactive/data/preview_readme.png)
 
 Installation:
 1. Checkout this repository on your PC
