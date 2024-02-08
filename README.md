@@ -26,4 +26,3 @@ This extension for NVIDIA Omniverse allows you to create a sharing link to Innoa
 5. Click "Test" to start a cloud streaming session yourself
 6. Click "Copy" to copy the sharing URL to the clipboard.
 7. Send the sharing link to the user you want to view the USD file via cloud streaming. Ensure the user has a Innoactive Portal account (Click "Invite user" button if needed)
-
