@@ -31,8 +31,7 @@ settings = carb.settings.get_settings()
 def get_sharing_link():
     print("[de.innoactive] get_sharing_link ")
     return self._sharing_url_model.as_string
-
-
+    
 # Any class derived from `omni.ext.IExt` in top level module (defined in `python.modules` of `extension.toml`) will be
 # instantiated when extension gets enabled and `on_startup(ext_id)` will be called. Later when extension gets disabled
 # on_shutdown() is called.
@@ -197,7 +196,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
                 
                 with ui.HStack(spacing=5):
                     img = ui.Image(height=40, alignment=ui.Alignment.RIGHT)
-                    img.source_url = ext_path + "/data/innoactive_logo2.png" 
+                    img.source_url = ext_path + "/data/innoactive_logo.png" 
                     
                 with ui.HStack(spacing=5):
                     ui.Label("USD file", name="usd_url", width=LABEL_WIDTH, height=HEIGHT, tooltip="Ensure the USD file is hosted on Nucleus and the user with whom you want to share access has permissions to access that file on Nucleus Server.")
