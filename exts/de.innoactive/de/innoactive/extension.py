@@ -143,16 +143,22 @@ class DeInnoactiveExtension(omni.ext.IExt):
         # Clear USD file from field
         self._usd_url_model.as_string = ""
 
-    def set_stage_usd(self):
+    def set_stage_usd(self, at_autoload=False):
         # Implement logic to fetch the currently opened USD file path
-        stage = omni.usd.get_context().get_stage()
-        rootLayer = stage.GetRootLayer()
-        file_path = rootLayer.realPath if rootLayer else ""
-        if self.is_sharable_usd(file_path):
-           #self.set_notification(f"USD file URL: {file_path}")
-            self._usd_url_model.as_string = file_path
-        else:
-            #self.set_notification("The USD file URL does not start with 'omniverse://'.")
+        try:
+            stage = omni.usd.get_context().get_stage()
+            rootLayer = stage.GetRootLayer()
+            file_path = rootLayer.realPath if rootLayer else ""
+            if self.is_sharable_usd(file_path):
+            #self.set_notification(f"USD file URL: {file_path}")
+                self._usd_url_model.as_string = file_path
+            else:
+                if not at_autoload: 
+                    self.set_notification("Please load a valid omniverse:// or http(s):// USD file URL to your stage.", self._warning_label)
+                self._usd_url_model.as_string = ""
+        except Exception as e:
+            if not at_autoload: 
+                self.set_notification("Please load a valid omniverse:// or http(s):// USD file URL to your stage.", self._warning_label)
             self._usd_url_model.as_string = ""
     
     def copy_url(self):
@@ -241,7 +247,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
                     self.button_test = ui.Button("Test", clicked_fn=self.open_url, width=60, height=HEIGHT, tooltip="Test the sharink link on your PC")
                     self.button_invite = ui.Button("Invite user", clicked_fn=self.open_invite_url, width=90, height=HEIGHT, tooltip="Invite a user to Innoactive Portal")
                     
-                with ui.HStack(spacing=5, height=HEIGHT, style={"Notification": {"color": cl("#76b900")}, "Error": {"color": cl("#d48f09")}}):
+                with ui.HStack(spacing=5, style={"Notification": {"color": cl("#76b900")}, "Error": {"color": cl("#d48f09")}}):
                     ui.Spacer( width=LABEL_WIDTH)
                     with ui.VStack(spacing=8, height=0):
                         self._notification_label = ui.Label("", word_wrap=True, name="notification", height=HEIGHT, visible=False, style_type_name_override="Notification")
@@ -249,4 +255,4 @@ class DeInnoactiveExtension(omni.ext.IExt):
 
         self.load_settings()
         self.update_sharing_link()
-        self.set_stage_usd()
+        self.set_stage_usd(at_autoload=True)
