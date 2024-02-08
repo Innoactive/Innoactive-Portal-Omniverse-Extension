@@ -28,9 +28,9 @@ APP_IDS = (3757, 1501)
 settings = carb.settings.get_settings()
 
 # Functions and vars are available to other extension as usual in python: `example.python_ext.some_public_function(x)`
-def some_public_function(x: int):
-    print("[de.innoactive] some_public_function was called with x: ", x)
-    return x ** x
+def get_sharing_link():
+    print("[de.innoactive] get_sharing_link ")
+    return self._sharing_url_model.as_string
 
 
 # Any class derived from `omni.ext.IExt` in top level module (defined in `python.modules` of `extension.toml`) will be
