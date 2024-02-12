@@ -115,18 +115,13 @@ class DeInnoactiveExtension(omni.ext.IExt):
         settings.set("/persistent/exts/de/innoactive/appId", self._app_id_model.as_int)
         
     def load_settings(self):
-        self._base_url_model.as_string = settings.get("/persistent/exts/de/innoactive/baseUrl")
-        self._mode_str_model.as_string = settings.get("/persistent/exts/de/innoactive/renderMode")
-        self._app_id_model.as_int = settings.get("/persistent/exts/de/innoactive/appId")
-        
-        # Defaults
-        if self._base_url_model.as_string == "":
+        try:
+            self._base_url_model.as_string = settings.get("/persistent/exts/de/innoactive/baseUrl")
+            self._mode_str_model.as_string = settings.get("/persistent/exts/de/innoactive/renderMode")
+            self._app_id_model.as_int = settings.get("/persistent/exts/de/innoactive/appId")
+        except Exception as e:
             self._base_url_model.as_string = DEFAULT_BASE_URL
-        
-        if self._mode_str_model.as_string == "":
             self._mode_str_model.as_string = DEFAULT_MODE
-        
-        if self._app_id_model.as_int == 0:
             self._app_id_model.as_int = DEFAULT_APP_ID
                 
     def clear_usd(self):
@@ -207,14 +202,20 @@ class DeInnoactiveExtension(omni.ext.IExt):
                 with ui.HStack(spacing=HSPACING):
                     ui.Label("Runtime", name="app", width=LABEL_WIDTH, height=HEIGHT, tooltip="Select the OV Kit runtime you want to use. You can upload your own runtimes, please contact Innoactive support.")
                     self._app_id_model = ui.SimpleStringModel()
-                    self._app_id_model.as_int = settings.get("/persistent/exts/de/innoactive/appId")
+                    try:
+                        self._app_id_model.as_int = settings.get("/persistent/exts/de/innoactive/appId")
+                    except Exception as e:
+                        self._app_id_model.as_int = DEFAULT_APP_ID
                     self._app_model = ui.ComboBox(APP_IDS.index(self._app_id_model.as_int), *APPS).model
                     self._app_model_changed = self._app_model.subscribe_item_changed_fn(self.on_app_changed)
                 
                 with ui.HStack(spacing=HSPACING):
                     ui.Label("Streaming Mode", name="mode", width=LABEL_WIDTH, height=HEIGHT, tooltip="Select weather the link shall start a browser stream, VR stream or a locally rendered session")
                     self._mode_str_model = ui.SimpleStringModel()
-                    self._mode_str_model.as_string = settings.get("/persistent/exts/de/innoactive/renderMode")
+                    try:
+                        self._mode_str_model.as_string = settings.get("/persistent/exts/de/innoactive/renderMode")
+                    except Exception as e:
+                         self._mode_str_model.as_string = DEFAULT_MODE
                     print("renderMode: " + self._mode_str_model.as_string)
                     self._mode_model = ui.ComboBox(MODES_TECHNICAL.index(self._mode_str_model.as_string), *MODES).model
                     self._mode_model_changed = self._mode_model.subscribe_item_changed_fn(self.on_mode_changed)
@@ -222,7 +223,11 @@ class DeInnoactiveExtension(omni.ext.IExt):
                 with ui.HStack(spacing=HSPACING):
                     ui.Label("Base Url", name="base_url", width=LABEL_WIDTH, height=HEIGHT, tooltip="Set this to your match your Innoactive Portal cloud domain URL")
                     self._base_url_model = ui.SimpleStringModel()
-                    self._base_url_model.as_string = settings.get("/persistent/exts/de/innoactive/baseUrl")
+                    try:
+                        self._base_url_model.as_string = settings.get("/persistent/exts/de/innoactive/baseUrl")
+                    except Exception as e:
+                        self._base_url_model.as_string = DEFAULT_BASE_URL
+
                     ui.StringField(model=self._base_url_model, height=HEIGHT, word_wrap=True)
                     self._base_url_model_changed = self._base_url_model.subscribe_value_changed_fn(self.on_value_changed)
         
