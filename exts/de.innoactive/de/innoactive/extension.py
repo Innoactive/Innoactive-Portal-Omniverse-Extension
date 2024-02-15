@@ -20,8 +20,8 @@ HSPACING = 5
 MODES = ("browser", "VR", "local")
 MODES_TECHNICAL = ("cloud/browser", "cloud/standalone", "local/windows")
 
-APPS = ("Omniverse USD Composer 2023.2.3", "Omniverse USD Composer 2023.2.0")
-APP_IDS = (3757, 1501)
+APPS = ("Omniverse USD Composer 2023.2.3", "Omniverse USD Explorer 2023.2.1")
+APP_IDS = (3757, 4006)
 
 DEFAULT_BASE_URL = "https://[yourcompany].innoactive.io"
 DEFAULT_APP_ID = 3757
@@ -230,7 +230,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
 
                     ui.StringField(model=self._base_url_model, height=HEIGHT, word_wrap=True)
                     self._base_url_model_changed = self._base_url_model.subscribe_value_changed_fn(self.on_value_changed)
-        
+                
                 ui.Line()
 
                 with ui.HStack(spacing=HSPACING):
