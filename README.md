@@ -42,4 +42,4 @@ Hints:
 - Ensure that the user has a Innoactive Portal account (Click "Invite user" button if needed)
 - Ensure that the user has access permissions for the selected Omniverse runtime
 
-Please contact Innoactive Support for any questions
+Please contact Innoactive Support for any questions (support@innoactive.de)
