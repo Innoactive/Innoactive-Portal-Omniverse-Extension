@@ -81,7 +81,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
         return file_path.startswith("omniverse://") or file_path.startswith("http://") or file_path.startswith("https://") # and not file_path.startswith("omniverse://localhost")
         
     def update_sharing_link(self):
-        args = quote(self._usd_url_model.as_string, safe='')
+        args = quote("--usd "+self._usd_url_model.as_string, safe='')
         self._sharing_url_model.as_string = self._base_url_model.as_string + "/apps/" + self._app_id_model.as_string + "/launch/" + self._mode_str_model.as_string + "?args=" + args
         self._sharing_url_model_label.text = self._sharing_url_model.as_string
 
@@ -173,7 +173,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
         if self.validate_form():
             invite_url = self._base_url_model.as_string + "/control-panel/v2/users"
             webbrowser.open_new_tab(invite_url)
-        
+    
     def on_shutdown(self):
         print("[de.innoactive] de innoactive shutdown")
 
@@ -188,7 +188,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
             with ui.VStack(spacing=VSPACING, height=0):
                 
                 with ui.HStack(spacing=HSPACING):
-                    img = ui.Image(height=40, alignment=ui.Alignment.RIGHT)
+                    img = ui.Image(height=80, alignment=ui.Alignment.RIGHT)
                     img.source_url = ext_path + "/data/innoactive_logo.png" 
                     
                 with ui.HStack(spacing=HSPACING):
@@ -249,6 +249,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
                     with ui.VStack(spacing=0, height=0):
                         self._notification_label = ui.Label("", word_wrap=True, name="notification", height=HEIGHT, visible=False, style_type_name_override="Notification")
                         self._warning_label = ui.Label("", word_wrap=True, name="notification", height=HEIGHT, visible=False, style_type_name_override="Error")
+
 
         self.load_settings()
         self.update_sharing_link()
