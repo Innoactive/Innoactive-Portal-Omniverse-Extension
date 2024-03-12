@@ -12,7 +12,7 @@ This extension for NVIDIA Omniverse allows you to create a sharing link to Innoa
 - XR cloud streaming supported: stream not only to the browser but even to a Standalone VR headset
 - Compliant with your IT: Both SaaS and Self-hosted options available
 
-![Innoactive Omniverse Extension](https://github.com/Innoactive/Portal-Omniverse-Extension/blob/master/exts/de.innoactive/data/preview_readme.png?raw=true)
+![Innoactive Omniverse Extension](https://github.com/Innoactive/Portal-Omniverse-Extension/blob/master/exts/innoactive.omniverse/data/preview_readme.png?raw=true)
 
 ## Requirements:
 - Innoactive Portal Account (get one at https://innoactive.io/)
