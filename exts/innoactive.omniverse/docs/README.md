@@ -1,4 +1,4 @@
-# Innoactive Omniverse Extension
+# Innoactive Portal Omniverse Extension
 
 This extension for NVIDIA Omniverse allows you to create a sharing link to Innoactive Portal that will allow users to launch the USD file with Omniverse Enterprise in the cloud and stream it into their browser and/or Standalone VR headset.
 
