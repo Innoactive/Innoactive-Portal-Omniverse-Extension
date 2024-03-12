@@ -31,7 +31,7 @@ settings = carb.settings.get_settings()
 
 # Public functions
 def get_sharing_link():
-    print("[de.innoactive] get_sharing_link ")
+    print("[innoactive.omniverse] get_sharing_link ")
     return self._sharing_url_model.as_string
     
 # Any class derived from `omni.ext.IExt` in top level module (defined in `python.modules` of `extension.toml`) will be
@@ -175,13 +175,13 @@ class DeInnoactiveExtension(omni.ext.IExt):
             webbrowser.open_new_tab(invite_url)
     
     def on_shutdown(self):
-        print("[de.innoactive] de innoactive shutdown")
+        print("[innoactive.omniverse] shutdown")
 
     def on_startup(self, ext_id):
         print("Innoactive startup")
         
         manager = omni.kit.app.get_app().get_extension_manager()
-        ext_path = manager.get_extension_path_by_module("de.innoactive")
+        ext_path = manager.get_extension_path_by_module("innoactive.omniverse")
         
         self._window = ui.Window("Innoactive Portal", width=600, height=350)
         with self._window.frame:
