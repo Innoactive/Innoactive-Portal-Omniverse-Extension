@@ -23,7 +23,7 @@ This extension for NVIDIA Omniverse allows you to create a sharing link to Innoa
 
 ## Installation:
 1. In Omniverse, go to "Window / Extensions / Options / Settings"
-2. Add this to the Extension Search Paths: git://github.com/Innoactive/Portal-Omniverse-Extension?branch=main&dir=exts
+2. Add this to the Extension Search Paths: git://github.com/Innoactive/Innoactive-Portal-Omniverse-Extension?branch=main&dir=exts
 3. Search for "Innoactive" in "Third Party" and enable the Innoactive extension (de.innoactive)
 4. Enable "autoload" if desired
 
