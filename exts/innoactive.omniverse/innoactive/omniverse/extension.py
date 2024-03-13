@@ -183,7 +183,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
         manager = omni.kit.app.get_app().get_extension_manager()
         ext_path = manager.get_extension_path_by_module("innoactive.omniverse")
         
-        self._window = ui.Window("Innoactive Portal", width=600, height=350)
+        self._window = ui.Window("Innoactive Portal", width=600, height=400)
         with self._window.frame:
             with ui.VStack(spacing=VSPACING, height=0):
                 
