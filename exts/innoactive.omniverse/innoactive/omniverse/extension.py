@@ -20,8 +20,8 @@ HSPACING = 5
 MODES = ("browser", "VR", "local")
 MODES_TECHNICAL = ("cloud/browser", "cloud/standalone", "local/windows")
 
-APPS = ("Omniverse USD Composer 2023.2.3", "Omniverse USD Explorer 2023.2.1")
-APP_IDS = (3757, 4006)
+APPS = ("Omniverse USD Explorer 2023.2.1", "Omniverse USD Composer 2023.2.3", "Omniverse USD Composer 2023.2.3 with Cesium Extension")
+APP_IDS = (4006, 3757, 4339)
 
 DEFAULT_BASE_URL = "https://[yourcompany].innoactive.io"
 DEFAULT_APP_ID = 3757
