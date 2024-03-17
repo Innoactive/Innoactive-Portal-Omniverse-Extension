@@ -11,7 +11,6 @@ from pxr import Usd
 import omni.usd
 from urllib.parse import quote
 import json
-
 LABEL_WIDTH = 120
 HEIGHT = 24
 VSPACING = 8
@@ -29,23 +28,57 @@ DEFAULT_MODE = "cloud/browser"
 DEFAULT_REGION = "us-west-2"
 
 # Path to your JSON file
-file_path = 'regions.json'
-REGION_DISPLAY_NAMES = ("Automatic")
-REGION_NAMES = ("")
+manager = omni.kit.app.get_app().get_extension_manager()
+ext_path = manager.get_extension_path_by_module("innoactive.omniverse")
+print("EXTPATH: " + ext_path)
+file_path = ext_path + '/data/regions.json'
+print("file_path: " + file_path)
+# Initialize empty tuples
+REGION_DISPLAY_NAMES = ()
+REGION_NAMES = ()
+
+REGION_DISPLAY_NAMES += ("- Automatic selection -",)
+REGION_NAMES += ("",)
+
 # Read the JSON file
-with open(file_path, 'r') as file:
-    data = json.load(file)
-    regions = data.get('regions', [])
-    # Loop over each region in the JSON file
-    for region in regions:
-        # Append the displayName and name of each region to the tuples
-        REGION_DISPLAY_NAMES += (region.get('displayName', ''),)
-        REGION_NAMES += (region.get('name', ''),)
+try:
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+        # Ensure data is a dictionary and contains the 'regions' key
+        if not isinstance(data, dict) or 'regions' not in data:
+            raise ValueError("JSON does not contain 'regions' key or is not a dictionary.")
+        
+        regions = data.get('regions', [])
+        
+        # Create a list of dictionaries for each region that supports "a10g.2xlarge" or "a10g.medium"
+        filtered_and_sorted_regions = [
+            {'displayName': region.get('displayName', ''), 
+             'name': region.get('name', ''), 
+             'cloudProvider': 'On-Prem' if region.get('cloudProvider', '') == 'Unmanaged' else region.get('cloudProvider', '')}
+            for region in regions
+            if any(vm_size in region.get('supportedVmSizes', []) for vm_size in ["a10g.2xlarge", "a10g.medium"])
+        ]
+        
+        # Sort this list by 'displayName'
+        # filtered_and_sorted_regions.sort(key=lambda x: x['displayName'])
 
+        # Loop over each filtered and sorted region
+        for region in filtered_and_sorted_regions:
+            display_name = f"{region['displayName']} ({region['cloudProvider']})"
+            name = region['name']
+            print("region " + name)
+            
+            REGION_DISPLAY_NAMES += (display_name,)
+            REGION_NAMES += (name,)
 
-# Print the tuples to verify
-print("REGION_DISPLAY_NAMES:", REGION_DISPLAY_NAMES)
-print("REGION_NAMES:", REGION_NAMES)
+    print("REGION_DISPLAY_NAMES:", REGION_DISPLAY_NAMES)
+    print("REGION_NAMES:", REGION_NAMES)
+except FileNotFoundError:
+    print(f"File {file_path} not found.")
+except json.JSONDecodeError:
+    print(f"Error decoding JSON from file {file_path}.")
+except ValueError as e:
+    print(e)
 
 settings = carb.settings.get_settings()
 
@@ -103,8 +136,8 @@ class DeInnoactiveExtension(omni.ext.IExt):
     def update_sharing_link(self):
         args = quote("--usd "+self._usd_url_model.as_string, safe='')
         regionParam = ""
-        if self._region_model.as_string != "":
-            regionParam = "&region=" + self._region_model.as_string
+        if self._region_str_model.as_string != "":
+            regionParam = "&region=" + self._region_str_model.as_string
 
         self._sharing_url_model.as_string = self._base_url_model.as_string + "/apps/" + self._app_id_model.as_string + "/launch/" + self._mode_str_model.as_string + "?args=" + args + regionParam
         self._sharing_url_model_label.text = self._sharing_url_model.as_string
