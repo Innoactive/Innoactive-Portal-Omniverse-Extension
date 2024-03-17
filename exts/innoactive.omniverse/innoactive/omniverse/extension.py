@@ -10,12 +10,12 @@ import threading
 from pxr import Usd
 import omni.usd
 from urllib.parse import quote
+import json
 
 LABEL_WIDTH = 120
 HEIGHT = 24
 VSPACING = 8
 HSPACING = 5
-
 
 MODES = ("browser", "VR", "local")
 MODES_TECHNICAL = ("cloud/browser", "cloud/standalone", "local/windows")
@@ -26,6 +26,26 @@ APP_IDS = (4006, 3757, 4339)
 DEFAULT_BASE_URL = "https://[yourcompany].innoactive.io"
 DEFAULT_APP_ID = 3757
 DEFAULT_MODE = "cloud/browser"
+DEFAULT_REGION = "us-west-2"
+
+# Path to your JSON file
+file_path = 'regions.json'
+REGION_DISPLAY_NAMES = ("Automatic")
+REGION_NAMES = ("")
+# Read the JSON file
+with open(file_path, 'r') as file:
+    data = json.load(file)
+    regions = data.get('regions', [])
+    # Loop over each region in the JSON file
+    for region in regions:
+        # Append the displayName and name of each region to the tuples
+        REGION_DISPLAY_NAMES += (region.get('displayName', ''),)
+        REGION_NAMES += (region.get('name', ''),)
+
+
+# Print the tuples to verify
+print("REGION_DISPLAY_NAMES:", REGION_DISPLAY_NAMES)
+print("REGION_NAMES:", REGION_NAMES)
 
 settings = carb.settings.get_settings()
 
@@ -82,7 +102,11 @@ class DeInnoactiveExtension(omni.ext.IExt):
         
     def update_sharing_link(self):
         args = quote("--usd "+self._usd_url_model.as_string, safe='')
-        self._sharing_url_model.as_string = self._base_url_model.as_string + "/apps/" + self._app_id_model.as_string + "/launch/" + self._mode_str_model.as_string + "?args=" + args
+        regionParam = ""
+        if self._region_model.as_string != "":
+            regionParam = "&region=" + self._region_model.as_string
+
+        self._sharing_url_model.as_string = self._base_url_model.as_string + "/apps/" + self._app_id_model.as_string + "/launch/" + self._mode_str_model.as_string + "?args=" + args + regionParam
         self._sharing_url_model_label.text = self._sharing_url_model.as_string
 
     def on_value_changed(self, item_model):
@@ -101,6 +125,14 @@ class DeInnoactiveExtension(omni.ext.IExt):
         self.update_sharing_link()
         self.save_settings()
     
+    def on_region_changed(self, item_model, item):
+        value_model = item_model.get_item_value_model(item)
+        current_index = value_model.as_int
+        self._region_str_model.as_string = REGION_NAMES[current_index]
+
+        self.update_sharing_link()
+        self.save_settings()
+    
     def on_app_changed(self, item_model, item):
         value_model = item_model.get_item_value_model(item)
         current_index = value_model.as_int
@@ -110,6 +142,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
         self.save_settings()
 
     def save_settings(self):
+        settings.set("/persistent/exts/de/innoactive/region", self._region_model.as_string)
         settings.set("/persistent/exts/de/innoactive/baseUrl", self._base_url_model.as_string)
         settings.set("/persistent/exts/de/innoactive/renderMode", self._mode_str_model.as_string)
         settings.set("/persistent/exts/de/innoactive/appId", self._app_id_model.as_int)
@@ -117,11 +150,13 @@ class DeInnoactiveExtension(omni.ext.IExt):
     def load_settings(self):
         try:
             self._base_url_model.as_string = settings.get("/persistent/exts/de/innoactive/baseUrl")
+            self._region_str_model.as_string = settings.get("/persistent/exts/de/innoactive/region")
             self._mode_str_model.as_string = settings.get("/persistent/exts/de/innoactive/renderMode")
             self._app_id_model.as_int = settings.get("/persistent/exts/de/innoactive/appId")
         except Exception as e:
             self._base_url_model.as_string = DEFAULT_BASE_URL
             self._mode_str_model.as_string = DEFAULT_MODE
+            self._region_str_model.as_string = DEFAULT_REGION
             self._app_id_model.as_int = DEFAULT_APP_ID
                 
     def clear_usd(self):
@@ -219,6 +254,17 @@ class DeInnoactiveExtension(omni.ext.IExt):
                     print("renderMode: " + self._mode_str_model.as_string)
                     self._mode_model = ui.ComboBox(MODES_TECHNICAL.index(self._mode_str_model.as_string), *MODES).model
                     self._mode_model_changed = self._mode_model.subscribe_item_changed_fn(self.on_mode_changed)
+                
+                with ui.HStack(spacing=HSPACING):
+                    ui.Label("Region", name="region", width=LABEL_WIDTH, height=HEIGHT, tooltip="In which region do you want to render the session?")
+                    self._region_str_model = ui.SimpleStringModel()
+                    try:
+                        self._region_str_model.as_string = settings.get("/persistent/exts/de/innoactive/region")
+                    except Exception as e:
+                         self._region_str_model.as_string = DEFAULT_REGION
+                    print("region: " + self._region_str_model.as_string)
+                    self._region_model = ui.ComboBox(REGION_NAMES.index(self._region_str_model.as_string), *REGION_DISPLAY_NAMES).model
+                    self._region_model_changed = self._region_model.subscribe_item_changed_fn(self.on_region_changed)
                 
                 with ui.HStack(spacing=HSPACING):
                     ui.Label("Base Url", name="base_url", width=LABEL_WIDTH, height=HEIGHT, tooltip="Set this to your match your Innoactive Portal cloud domain URL")
