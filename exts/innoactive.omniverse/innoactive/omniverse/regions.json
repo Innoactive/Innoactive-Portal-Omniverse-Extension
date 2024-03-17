@@ -1,0 +1,1956 @@
+{
+    "userPosition": {
+        "latitude": 37.32759094238281,
+        "longitude": -121.8887710571289
+    },
+    "regions": [
+        {
+            "organizationId": "1370",
+            "isEnabled": true,
+            "name": "nvidia-gtc",
+            "displayName": "Nvidia GTC",
+            "cloudProvider": "Unmanaged",
+            "type": "Unmanaged",
+            "networkOperator": "Custom",
+            "latencyTestUrl": null,
+            "supportedVmSizes": [
+                "a10g.medium"
+            ],
+            "latitude": 37.323832038,
+            "longitude": -121.88666312,
+            "timeZoneId": "UTC",
+            "availability": 1,
+            "distanceM": 458.0419096461855
+        },
+        {
+            "organizationId": "1370",
+            "isEnabled": true,
+            "name": "nvidia-gtc-cx4",
+            "displayName": "Nvidia GTC CloudXR4",
+            "cloudProvider": "Unmanaged",
+            "type": "Unmanaged",
+            "networkOperator": "Custom",
+            "latencyTestUrl": null,
+            "supportedVmSizes": [
+                "a10g.medium"
+            ],
+            "latitude": 37.323832038,
+            "longitude": -121.88666312,
+            "timeZoneId": "UTC",
+            "availability": 1,
+            "distanceM": 458.0419096461855
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-1",
+            "displayName": "California",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.us-west-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 37.44368,
+            "longitude": -122.153664,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 26750.686568529447
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "westus",
+            "displayName": "West US",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42westus.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 37.783,
+            "longitude": -122.417,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 68852.63652028982
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-wl1-sfo-wlz-1",
+            "displayName": "San Francisco Bay Area (Wavelength Verizon)",
+            "cloudProvider": "AWS",
+            "type": "WavelengthZone",
+            "networkOperator": "VerizonUs",
+            "latencyTestUrl": "https://us-west-2-wl1-sfo-wlz-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 37.773972,
+            "longitude": -122.431297,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 68987.60410760638
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-lax-1",
+            "displayName": "Los Angeles",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west-2-lax-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 34.052235,
+            "longitude": -118.243683,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 491263.0156396515
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west2",
+            "displayName": "Los Angeles",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west2-5tkroniexa-wl.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 34.052235,
+            "longitude": -118.243683,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 491263.0156396515
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-las-1",
+            "displayName": "Las Vegas",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west-2-las-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 36.18811,
+            "longitude": -115.176468,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 611632.0367992731
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west4",
+            "displayName": "Las Vegas",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west4-5tkroniexa-wn.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 36.18811,
+            "longitude": -115.176468,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 611632.0367992731
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-pdx-1",
+            "displayName": "Portland",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west-2-pdx-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 45.523064,
+            "longitude": -122.676483,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 914433.857295715
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west1",
+            "displayName": "The Dalles",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west1-5tkroniexa-uw.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 45.5946,
+            "longitude": -121.1787,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 921936.0002429283
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west3",
+            "displayName": "Salt Lake City",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west3-5tkroniexa-wm.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 40.758701,
+            "longitude": -111.876183,
+            "timeZoneId": "America/Denver",
+            "availability": 1,
+            "distanceM": 945196.668173531
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2",
+            "displayName": "Oregon",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.us-west-2.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 45.9174667,
+            "longitude": -119.2684488,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 980360.4246922968
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-phx-1",
+            "displayName": "Phoenix",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west-2-phx-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 33.448376,
+            "longitude": -112.074036,
+            "timeZoneId": "America/Phoenix",
+            "availability": 1,
+            "distanceM": 988909.2098382823
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-wl1-phx-wlz-1",
+            "displayName": "Phoenix (Wavelength Verizon)",
+            "cloudProvider": "AWS",
+            "type": "WavelengthZone",
+            "networkOperator": "VerizonUs",
+            "latencyTestUrl": "https://us-west-2-wl1-phx-wlz-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 33.448376,
+            "longitude": -112.074036,
+            "timeZoneId": "America/Phoenix",
+            "availability": 1,
+            "distanceM": 988909.2098382823
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "westus2",
+            "displayName": "West US 2",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42westus2.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 47.233,
+            "longitude": -119.852,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 1114955.829715371
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-sea-1",
+            "displayName": "Seattle",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west-2-sea-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 47.608013,
+            "longitude": -122.335167,
+            "timeZoneId": "America/Los_Angeles",
+            "availability": 1,
+            "distanceM": 1144698.8391330382
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-west-2-den-1",
+            "displayName": "Denver",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-west-2-den-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 39.742043,
+            "longitude": -104.991531,
+            "timeZoneId": "America/Denver",
+            "availability": 1,
+            "distanceM": 1492974.7065101399
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-central1",
+            "displayName": "Council Bluffs",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-central1-5tkroniexa-uc.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 41.250854,
+            "longitude": -95.882042,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2273283.5305203637
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-dfw-1",
+            "displayName": "Dallas",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-dfw-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 32.779167,
+            "longitude": -96.808891,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2332890.439985812
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "southcentralus",
+            "displayName": "South Central US",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42southcentralus.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 29.4167,
+            "longitude": -98.5,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2337309.2193294023
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-mci-1",
+            "displayName": "Kansas City",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-mci-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 39.099724,
+            "longitude": -94.578331,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2387211.823620741
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "centralus",
+            "displayName": "Central US",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42centralus.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 41.5908,
+            "longitude": -93.6208,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2463264.453881981
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-msp-1",
+            "displayName": "Minneapolis",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-msp-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 44.986656,
+            "longitude": -93.258133,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2530051.2151343552
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-iah-1",
+            "displayName": "Houston",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-iah-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 29.749907,
+            "longitude": -95.358421,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2591102.846722283
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "northcentralus",
+            "displayName": "North Central US",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42northcentralus.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 40,
+            "longitude": -89,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2857152.138146728
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-chi-1",
+            "displayName": "Chicago",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-chi-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 41.881832,
+            "longitude": -87.623177,
+            "timeZoneId": "America/Chicago",
+            "availability": 1,
+            "distanceM": 2961286.8615681287
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-2",
+            "displayName": "Ohio",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.us-east-2.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 40.0946354,
+            "longitude": -82.7541337,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 3385038.3620535536
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-atl-1",
+            "displayName": "Atlanta",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-atl-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 33.753746,
+            "longitude": -84.38633,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 3397054.191496811
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eastus",
+            "displayName": "East US",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42eastus.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 37.3719,
+            "longitude": -79.8164,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 3690388.146114721
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east1",
+            "displayName": "Moncks Corner",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east1-5tkroniexa-ue.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 33.1963,
+            "longitude": -80.0143,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 3801814.822284046
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eastus2",
+            "displayName": "East US 2",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42eastus2.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 36.6681,
+            "longitude": -78.3889,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 3832253.9563524737
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east4",
+            "displayName": "Ashburn",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east4-5tkroniexa-uk.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 39.0403,
+            "longitude": -77.4852,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 3850187.8179914067
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1",
+            "displayName": "Virginia",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.us-east-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 38.9940541,
+            "longitude": -77.4524237,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 3853993.771913387
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-phl-1",
+            "displayName": "Philadelphia",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-phl-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 39.952583,
+            "longitude": -75.165222,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 4025564.972943365
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ca-central-1",
+            "displayName": "Canada Central",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ca-central-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 45.5,
+            "longitude": -73.6,
+            "timeZoneId": "America/Toronto",
+            "availability": 1,
+            "distanceM": 4067629.9172466123
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "northamerica-northeast1",
+            "displayName": "Montréal",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://northamerica-northeast1-5tkroniexa-nn.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 45.508888,
+            "longitude": -73.561668,
+            "timeZoneId": "America/Toronto",
+            "availability": 1,
+            "distanceM": 4070530.929355589
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-nyc-1",
+            "displayName": "New York City",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-nyc-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 40.73061,
+            "longitude": -73.935242,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 4111510.1467795065
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-wl1-nyc-wlz-1",
+            "displayName": "New York City (Wavelength Verizon)",
+            "cloudProvider": "AWS",
+            "type": "WavelengthZone",
+            "networkOperator": "VerizonUs",
+            "latencyTestUrl": "https://us-east-1-wl1-nyc-wlz-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 40.73061,
+            "longitude": -73.935242,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 4111510.1467795065
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-mia-1",
+            "displayName": "Miami",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-mia-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 25.761681,
+            "longitude": -80.191788,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 4121580.2713380503
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-bos-1",
+            "displayName": "Boston",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-bos-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 42.361145,
+            "longitude": -71.057083,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 4314573.060561819
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-wl1-bos-wlz-1",
+            "displayName": "Boston (Wavelength Verizon)",
+            "cloudProvider": "AWS",
+            "type": "WavelengthZone",
+            "networkOperator": "VerizonUs",
+            "latencyTestUrl": "https://us-east-1-wl1-bos-wlz-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 42.361145,
+            "longitude": -71.057083,
+            "timeZoneId": "America/New_York",
+            "availability": 1,
+            "distanceM": 4314573.060561819
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-west-1",
+            "displayName": "Ireland",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.eu-west-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 53.4056545,
+            "longitude": -6.224503,
+            "timeZoneId": "Europe/Dublin",
+            "availability": 1,
+            "distanceM": 8196377.111479394
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "northeurope",
+            "displayName": "North Europe",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42northeurope.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 53.4056545,
+            "longitude": -6.224503,
+            "timeZoneId": "Europe/Dublin",
+            "availability": 1,
+            "distanceM": 8196377.111479394
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "japaneast",
+            "displayName": "Japan East",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42japaneast.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 35.652832,
+            "longitude": 139.839478,
+            "timeZoneId": "Asia/Tokyo",
+            "availability": 1,
+            "distanceM": 8335859.986360937
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "asia-northeast1",
+            "displayName": "Tokyo",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://asia-northeast1-5tkroniexa-an.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 35.672855,
+            "longitude": 139.817413,
+            "timeZoneId": "Asia/Tokyo",
+            "availability": 1,
+            "distanceM": 8336194.825385522
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-northeast-1",
+            "displayName": "Tokyo",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ap-northeast-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 35.617436,
+            "longitude": 139.7459176,
+            "timeZoneId": "Asia/Tokyo",
+            "availability": 1,
+            "distanceM": 8345039.058810539
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "swedencentral",
+            "displayName": "Sweden Central",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42swedencentral.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 60.67452,
+            "longitude": 17.14174,
+            "timeZoneId": "Europe/Stockholm",
+            "availability": 1,
+            "distanceM": 8506159.881929394
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "europe-west2",
+            "displayName": "London",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://europe-west2-5tkroniexa-nw.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 51.509865,
+            "longitude": -0.118092,
+            "timeZoneId": "Europe/London",
+            "availability": 1,
+            "distanceM": 8640725.103939038
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-west-2",
+            "displayName": "London",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.eu-west-2.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 51.5085036,
+            "longitude": -0.0609266,
+            "timeZoneId": "Europe/London",
+            "availability": 1,
+            "distanceM": 8643573.875539578
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "uksouth",
+            "displayName": "UK South",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42uksouth.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 50.941,
+            "longitude": -0.799,
+            "timeZoneId": "Europe/London",
+            "availability": 1,
+            "distanceM": 8653321.972786218
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-north-1",
+            "displayName": "Stockholm",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.eu-north-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 59.326242,
+            "longitude": 17.8419717,
+            "timeZoneId": "Europe/Stockholm",
+            "availability": 1,
+            "distanceM": 8653989.627009518
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-northeast-3",
+            "displayName": "Osaka",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ap-northeast-3.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 34.672314,
+            "longitude": 135.484802,
+            "timeZoneId": "Asia/Tokyo",
+            "availability": 1,
+            "distanceM": 8719206.236820761
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-north-1-hel-1",
+            "displayName": "Helsinki",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://eu-north-1-hel-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 60.192059,
+            "longitude": 24.945831,
+            "timeZoneId": "Europe/Helsinki",
+            "availability": 1,
+            "distanceM": 8763060.769996105
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "europe-west4",
+            "displayName": "Eemshaven",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://europe-west4-5tkroniexa-ez.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 53.448333,
+            "longitude": 6.831111,
+            "timeZoneId": "Europe/Amsterdam",
+            "availability": 1,
+            "distanceM": 8791475.976220734
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "westeurope",
+            "displayName": "West Europe",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42westeurope.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 52.3667,
+            "longitude": 4.9,
+            "timeZoneId": "Europe/Amsterdam",
+            "availability": 1,
+            "distanceM": 8800928.863313815
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-north-1-cph-1",
+            "displayName": "Copenhagen",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://eu-north-1-cph-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 55.676098,
+            "longitude": 12.568337,
+            "timeZoneId": "Europe/Copenhagen",
+            "availability": 1,
+            "distanceM": 8818365.292140115
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-central-1-ham-1",
+            "displayName": "Hamburg",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://eu-central-1-ham-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 53.551086,
+            "longitude": 9.993682,
+            "timeZoneId": "Europe/Berlin",
+            "availability": 1,
+            "distanceM": 8911573.821370665
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "europe-west1",
+            "displayName": "St. Ghislain",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://europe-west1-5tkroniexa-ew.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 50.44816,
+            "longitude": 3.81886,
+            "timeZoneId": "Europe/Brussels",
+            "availability": 1,
+            "distanceM": 8913882.129434034
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-west-3",
+            "displayName": "Paris",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.eu-west-3.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 48.6009709,
+            "longitude": 2.2976644,
+            "timeZoneId": "Europe/Paris",
+            "availability": 1,
+            "distanceM": 8995527.582448775
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-northeast-2",
+            "displayName": "Seoul",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ap-northeast-2.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 37.5326,
+            "longitude": 127.024612,
+            "timeZoneId": "Asia/Seoul",
+            "availability": 1,
+            "distanceM": 9104181.691000704
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "asia-northeast3",
+            "displayName": "Seoul",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://asia-northeast3-5tkroniexa-du.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 37.5326,
+            "longitude": 127.024612,
+            "timeZoneId": "Asia/Seoul",
+            "availability": 1,
+            "distanceM": 9104181.691000704
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "koreacentral",
+            "displayName": "Korea Central",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42koreacentral.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 37.5326,
+            "longitude": 127.024612,
+            "timeZoneId": "Asia/Seoul",
+            "availability": 1,
+            "distanceM": 9104181.691000704
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-central-1",
+            "displayName": "Frankfurt",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.eu-central-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 50.0992094,
+            "longitude": 8.6303932,
+            "timeZoneId": "Europe/Berlin",
+            "availability": 1,
+            "distanceM": 9160548.896533785
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "germanywestcentral",
+            "displayName": "Germany West Central",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42germanywestcentral.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 50.110924,
+            "longitude": 8.682127,
+            "timeZoneId": "Europe/Berlin",
+            "availability": 1,
+            "distanceM": 9161767.124700325
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "europe-west3",
+            "displayName": "Frankfurt",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://europe-west3-5tkroniexa-ey.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 50.110573,
+            "longitude": 8.684966,
+            "timeZoneId": "Europe/Berlin",
+            "availability": 1,
+            "distanceM": 9161921.58747778
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-central-1-waw-1",
+            "displayName": "Warsaw",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://eu-central-1-waw-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 52.237049,
+            "longitude": 21.017532,
+            "timeZoneId": "Europe/Warsaw",
+            "availability": 1,
+            "distanceM": 9435507.746846447
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "europe-central2",
+            "displayName": "Warsaw",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://europe-central2-5tkroniexa-lm.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 52.237049,
+            "longitude": 21.017532,
+            "timeZoneId": "Europe/Warsaw",
+            "availability": 1,
+            "distanceM": 9435507.746846447
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "us-east-1-scl-1",
+            "displayName": "Santiago (Chile)",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://us-east-1-scl-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": -33.447487,
+            "longitude": -70.673676,
+            "timeZoneId": "America/Santiago",
+            "availability": 1,
+            "distanceM": 9496589.334088808
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "eu-south-1",
+            "displayName": "Milan",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.eu-south-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 45.4628328,
+            "longitude": 9.1076927,
+            "timeZoneId": "Europe/Rome",
+            "availability": 1,
+            "distanceM": 9592797.52232735
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "sa-east-1",
+            "displayName": "São Paulo",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.sa-east-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -23.4925798,
+            "longitude": -46.8105593,
+            "timeZoneId": "America/Sao_Paulo",
+            "availability": 1,
+            "distanceM": 10360238.850553961
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "brazilsouth",
+            "displayName": "Brazil South",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42brazilsouth.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -23.533773,
+            "longitude": -46.62529,
+            "timeZoneId": "America/Sao_Paulo",
+            "availability": 1,
+            "distanceM": 10377720.459289921
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "southamerica-east1",
+            "displayName": "São Paulo",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://southamerica-east1-5tkroniexa-rj.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -23.533773,
+            "longitude": -46.62529,
+            "timeZoneId": "America/Sao_Paulo",
+            "availability": 1,
+            "distanceM": 10377720.459289921
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-northeast-1-tpe-1",
+            "displayName": "Taipei",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://ap-northeast-1-tpe-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 25.105497,
+            "longitude": 121.597366,
+            "timeZoneId": "Asia/Taipei",
+            "availability": 1,
+            "distanceM": 10425642.189011313
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-southeast-2-akl-1",
+            "displayName": "Auckland",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://ap-southeast-2-akl-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": -36.848461,
+            "longitude": 174.763336,
+            "timeZoneId": "Pacific/Auckland",
+            "availability": 1,
+            "distanceM": 10515361.948783504
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "asia-east1",
+            "displayName": "Changhua County",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://asia-east1-5tkroniexa-de.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 24.078176,
+            "longitude": 120.545807,
+            "timeZoneId": "Asia/Taipei",
+            "availability": 1,
+            "distanceM": 10581703.646011565
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-east-1",
+            "displayName": "Hong Kong",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ap-east-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 22.2908475,
+            "longitude": 114.2723379,
+            "timeZoneId": "Asia/Hong_Kong",
+            "availability": 1,
+            "distanceM": 11168376.479859246
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "asia-east2",
+            "displayName": "Hong Kong",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://asia-east2-5tkroniexa-df.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 22.302711,
+            "longitude": 114.177216,
+            "timeZoneId": "Asia/Hong_Kong",
+            "availability": 1,
+            "distanceM": 11173970.801915932
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "il-central-1",
+            "displayName": "Tel Aviv",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.il-central-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 32.109333,
+            "longitude": 34.855499,
+            "timeZoneId": "Asia/Jerusalem",
+            "availability": 1,
+            "distanceM": 11935765.800127761
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "me-west1",
+            "displayName": "Tel Aviv",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://me-west1-5tkroniexa-zf.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 32.109333,
+            "longitude": 34.855499,
+            "timeZoneId": "Asia/Jerusalem",
+            "availability": 1,
+            "distanceM": 11935765.800127761
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "australia-southeast1",
+            "displayName": "Sydney",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://australia-southeast1-5tkroniexa-ts.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -33.865143,
+            "longitude": 151.2099,
+            "timeZoneId": "Australia/Sydney",
+            "availability": 1,
+            "distanceM": 11973783.55235732
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-southeast-2",
+            "displayName": "Sydney",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ap-southeast-2.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -33.9117717,
+            "longitude": 151.1907535,
+            "timeZoneId": "Australia/Sydney",
+            "availability": 1,
+            "distanceM": 11978127.756804314
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "australiacentral",
+            "displayName": "Australia Central",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42australiacentral.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -35.282001,
+            "longitude": 149.128998,
+            "timeZoneId": "Australia/Sydney",
+            "availability": 1,
+            "distanceM": 12219559.41328407
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "australiaeast",
+            "displayName": "Australia East",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42australiaeast.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -31.840233,
+            "longitude": 145.612793,
+            "timeZoneId": "Australia/Sydney",
+            "availability": 1,
+            "distanceM": 12291744.665917292
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-south-1-del-1",
+            "displayName": "Delhi",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://ap-south-1-del-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 28.6448,
+            "longitude": 77.216721,
+            "timeZoneId": "Asia/Kolkata",
+            "availability": 1,
+            "distanceM": 12424267.892470278
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "af-south-1-los-1",
+            "displayName": "Lagos",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://af-south-1-los-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 6.465422,
+            "longitude": 3.406448,
+            "timeZoneId": "Africa/Lagos",
+            "availability": 1,
+            "distanceM": 12558668.185142329
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-south-1-ccu-1",
+            "displayName": "Kolkata",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://ap-south-1-ccu-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 22.572645,
+            "longitude": 88.363892,
+            "timeZoneId": "Asia/Kolkata",
+            "availability": 1,
+            "distanceM": 12650722.905168585
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-southeast-1-bkk-1",
+            "displayName": "Bangkok",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://ap-southeast-1-bkk-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 13.736717,
+            "longitude": 100.523186,
+            "timeZoneId": "Asia/Bangkok",
+            "availability": 1,
+            "distanceM": 12824470.177039165
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "me-south-1",
+            "displayName": "Bahrain",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.me-south-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 25.941298,
+            "longitude": 50.3073907,
+            "timeZoneId": "Asia/Bahrain",
+            "availability": 1,
+            "distanceM": 12943919.741719248
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "me-central-1",
+            "displayName": "Dubai",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.me-central-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 25.276987,
+            "longitude": 55.296249,
+            "timeZoneId": "Asia/Dubai",
+            "availability": 1,
+            "distanceM": 13058814.659231007
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "me-south-1-mct-1",
+            "displayName": "Muscat",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://me-south-1-mct-1a.aws-latency-test.com",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": 23.614328,
+            "longitude": 58.545284,
+            "timeZoneId": "Asia/Muscat",
+            "availability": 1,
+            "distanceM": 13249930.833298197
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-south-1",
+            "displayName": "Mumbai",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ap-south-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "a10g.small",
+                "a10g.medium",
+                "a10g.large",
+                "a10g.2xlarge"
+            ],
+            "latitude": 19.2425503,
+            "longitude": 72.9667878,
+            "timeZoneId": "Asia/Kolkata",
+            "availability": 1,
+            "distanceM": 13546730.086793141
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "asia-south1",
+            "displayName": "Mumbai",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://asia-south1-5tkroniexa-el.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 19.228825,
+            "longitude": 72.854118,
+            "timeZoneId": "Asia/Kolkata",
+            "availability": 1,
+            "distanceM": 13551041.050069388
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "centralindia",
+            "displayName": "Central India",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42centralindia.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 18.516726,
+            "longitude": 73.856255,
+            "timeZoneId": "Asia/Kolkata",
+            "availability": 1,
+            "distanceM": 13601827.591326365
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "asia-southeast1",
+            "displayName": "Singapore",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://asia-southeast1-5tkroniexa-as.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium",
+                "l4.small",
+                "l4.medium",
+                "l4.large"
+            ],
+            "latitude": 1.29027,
+            "longitude": 103.851959,
+            "timeZoneId": "Asia/Singapore",
+            "availability": 1,
+            "distanceM": 13662424.362781566
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "southeastasia",
+            "displayName": "South East Asia",
+            "cloudProvider": "Azure",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://inno42southeastasia.blob.core.windows.net/content/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 1.29027,
+            "longitude": 103.851959,
+            "timeZoneId": "Asia/Singapore",
+            "availability": 1,
+            "distanceM": 13662424.362781566
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-southeast-1",
+            "displayName": "Singapore",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.ap-southeast-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": 1.3218269,
+            "longitude": 103.6930643,
+            "timeZoneId": "Asia/Singapore",
+            "availability": 1,
+            "distanceM": 13671800.784896128
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "asia-southeast2",
+            "displayName": "Jakarta",
+            "cloudProvider": "GoogleCloud",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://asia-southeast2-5tkroniexa-et.a.run.app/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -6.2,
+            "longitude": 106.816666,
+            "timeZoneId": "Asia/Jakarta",
+            "availability": 1,
+            "distanceM": 14017908.98022755
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "ap-southeast-2-per-1",
+            "displayName": "Perth",
+            "cloudProvider": "AWS",
+            "type": "LocalZone",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://ap-southeast-2-per-1.latency-check.innoactive.io",
+            "supportedVmSizes": [
+                "t4.medium"
+            ],
+            "latitude": -31.953512,
+            "longitude": 115.857048,
+            "timeZoneId": "Australia/Perth",
+            "availability": 1,
+            "distanceM": 14792807.371630676
+        },
+        {
+            "organizationId": null,
+            "isEnabled": true,
+            "name": "af-south-1",
+            "displayName": "Cape Town",
+            "cloudProvider": "AWS",
+            "type": "Region",
+            "networkOperator": "Internet",
+            "latencyTestUrl": "https://dynamodb.af-south-1.amazonaws.com/ping",
+            "supportedVmSizes": [
+                "t4.small",
+                "t4.medium"
+            ],
+            "latitude": -33.914651,
+            "longitude": 18.3758801,
+            "timeZoneId": "Africa/Johannesburg",
+            "availability": 1,
+            "distanceM": 16444020.70259668
+        }
+    ]
+}
