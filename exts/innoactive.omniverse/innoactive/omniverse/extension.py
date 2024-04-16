@@ -20,11 +20,11 @@ HSPACING = 5
 MODES = ("browser", "VR", "local")
 MODES_TECHNICAL = ("cloud/browser", "cloud/standalone", "local/windows")
 
-APPS = ("Omniverse USD Explorer 2023.2.1", "Omniverse USD Composer 2023.2.3", "Omniverse USD Composer 2023.2.3 with Cesium Extension")
-APP_IDS = (4006, 3757, 4339)
+APPS = ("Omniverse USD Explorer 2023.2.1", "Omniverse USD Explorer 2023.2.1 (dev)", "Omniverse USD Composer 2023.2.3", "Omniverse USD Composer 2023.2.3 (dev)", "Omniverse USD Composer 2023.2.3 with Cesium Extension", "Omniverse USD Composer 2023.2.5", "Omniverse USD Composer 2023.2.5 (dev)")
+APP_IDS = (4006, 1017, 3757, 1020, 4339, 4767, 1018)
 
 DEFAULT_BASE_URL = "https://[yourcompany].innoactive.io"
-DEFAULT_APP_ID = 3757
+DEFAULT_APP_ID = 1018
 DEFAULT_MODE = "cloud/browser"
 
 settings = carb.settings.get_settings()
