@@ -20,11 +20,11 @@ HSPACING = 5
 MODES = ("browser", "VR", "local")
 MODES_TECHNICAL = ("cloud/browser", "cloud/standalone", "local/windows")
 
-APPS = ("Omniverse USD Explorer 2023.2.1", "Omniverse USD Composer 2023.2.3", "Omniverse USD Composer 2023.2.3 with Cesium Extension")
-APP_IDS = (4006, 3757, 4339)
+APPS = ("Omniverse USD Explorer 2023.2.1", "Omniverse USD Composer 2023.2.5")
+APP_IDS = ("7b0b754a-b90b-4d3b-a043-d9a72f1e4d7f", "48d5be05-49af-41d3-a383-942ebc377c59")
 
 DEFAULT_BASE_URL = "https://[yourcompany].innoactive.io"
-DEFAULT_APP_ID = 3757
+DEFAULT_APP_ID = "7b0b754a-b90b-4d3b-a043-d9a72f1e4d7f"
 DEFAULT_MODE = "cloud/browser"
 
 settings = carb.settings.get_settings()
@@ -104,7 +104,7 @@ class DeInnoactiveExtension(omni.ext.IExt):
     def on_app_changed(self, item_model, item):
         value_model = item_model.get_item_value_model(item)
         current_index = value_model.as_int
-        self._app_id_model.as_int = APP_IDS[current_index]
+        self._app_id_model.as_string = APP_IDS[current_index]
 
         self.update_sharing_link()
         self.save_settings()
@@ -112,17 +112,17 @@ class DeInnoactiveExtension(omni.ext.IExt):
     def save_settings(self):
         settings.set("/persistent/exts/de/innoactive/baseUrl", self._base_url_model.as_string)
         settings.set("/persistent/exts/de/innoactive/renderMode", self._mode_str_model.as_string)
-        settings.set("/persistent/exts/de/innoactive/appId", self._app_id_model.as_int)
+        settings.set("/persistent/exts/de/innoactive/appId", self._app_id_model.as_string)
         
     def load_settings(self):
         try:
             self._base_url_model.as_string = settings.get("/persistent/exts/de/innoactive/baseUrl")
             self._mode_str_model.as_string = settings.get("/persistent/exts/de/innoactive/renderMode")
-            self._app_id_model.as_int = settings.get("/persistent/exts/de/innoactive/appId")
+            self._app_id_model.as_string = settings.get("/persistent/exts/de/innoactive/appId")
         except Exception as e:
             self._base_url_model.as_string = DEFAULT_BASE_URL
             self._mode_str_model.as_string = DEFAULT_MODE
-            self._app_id_model.as_int = DEFAULT_APP_ID
+            self._app_id_model.as_string = DEFAULT_APP_ID
                 
     def clear_usd(self):
         # Clear USD file from field
@@ -203,10 +203,10 @@ class DeInnoactiveExtension(omni.ext.IExt):
                     ui.Label("Runtime", name="app", width=LABEL_WIDTH, height=HEIGHT, tooltip="Select the OV Kit runtime you want to use. You can upload your own runtimes, please contact Innoactive support.")
                     self._app_id_model = ui.SimpleStringModel()
                     try:
-                        self._app_id_model.as_int = settings.get("/persistent/exts/de/innoactive/appId")
+                        self._app_id_model.as_string = settings.get("/persistent/exts/de/innoactive/appId")
                     except Exception as e:
-                        self._app_id_model.as_int = DEFAULT_APP_ID
-                    self._app_model = ui.ComboBox(APP_IDS.index(self._app_id_model.as_int), *APPS).model
+                        self._app_id_model.as_string = DEFAULT_APP_ID
+                    self._app_model = ui.ComboBox(APP_IDS.index(self._app_id_model.as_string), *APPS).model
                     self._app_model_changed = self._app_model.subscribe_item_changed_fn(self.on_app_changed)
                 
                 with ui.HStack(spacing=HSPACING):
