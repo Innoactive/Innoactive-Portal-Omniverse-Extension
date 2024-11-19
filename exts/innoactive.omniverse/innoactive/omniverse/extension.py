@@ -17,11 +17,11 @@ VSPACING = 8
 HSPACING = 5
 
 
-MODES = ("browser", "VR", "local")
+MODES = ("browser", "XR", "local")
 MODES_TECHNICAL = ("cloud/browser", "cloud/standalone", "local/windows")
 
-APPS = ("Omniverse USD Explorer 2023.2.1", "Omniverse USD Composer 2023.2.5")
-APP_IDS = ("7b0b754a-b90b-4d3b-a043-d9a72f1e4d7f", "48d5be05-49af-41d3-a383-942ebc377c59")
+APPS = ("Omniverse USD Explorer", "Omniverse USD Composer", "Omniverse USD Streamer for AVP (XR only)")
+APP_IDS = ("7b0b754a-b90b-4d3b-a043-d9a72f1e4d7f", "48d5be05-49af-41d3-a383-942ebc377c59", "0a7b7798-123e-4158-ad66-a09e255a2400")
 
 DEFAULT_BASE_URL = "https://[yourcompany].innoactive.io"
 DEFAULT_APP_ID = "7b0b754a-b90b-4d3b-a043-d9a72f1e4d7f"
